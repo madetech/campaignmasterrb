@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'campaign-master'
+  s.name        = 'campaign_master'
   s.version     = '1.0.0'
   s.date        = '2012-04-23'
   s.summary     = "Interface to interact with the Campaign Master API"

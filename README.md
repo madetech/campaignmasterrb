@@ -1,6 +1,7 @@
 #campaignmasterb
 
 [![Build Status](https://secure.travis-ci.org/madebymade/campaignmasterrb.png)](http://travis-ci.org/madebymade/campaignmasterrb)
+[![Gem Version](https://badge.fury.io/rb/campaign_master.png)](http://badge.fury.io/rb/campaign_master)
 
 Ruby interface that allows you to send subscribers to a [Campaign Master](http://www.campaignmaster.co.uk/) list.
 
