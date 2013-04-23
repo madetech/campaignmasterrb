@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.campaignmaster.co.uk/v1.1/CampaignMasterJobService.svc?wsdl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 22 Apr 2013 16:35:11 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-Aspnet-Version:
+      - 4.0.30319
+      Content-Length:
+      - '3663'
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><wsdl:definitions name="CampaignMasterJobService"
+        targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+        xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+        xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://campaignmaster.com.au"
+        xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+        xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+        xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"><wsp:Policy
+        wsu:Id="BasicHttpBinding_ICampaignMasterJobService_policy"><wsp:ExactlyOne><wsp:All><wsoma:OptimizedMimeSerialization
+        xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/><sp:TransportBinding
+        xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken
+        RequireClientCertificate="false"/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout></wsp:Policy></sp:TransportBinding></wsp:All></wsp:ExactlyOne></wsp:Policy><wsdl:import
+        namespace="http://campaignmaster.com.au" location="http://api.campaignmaster.co.uk/v1.1/CampaignMasterJobService.svc?wsdl=wsdl0"/><wsdl:types/><wsdl:binding
+        name="BasicHttpBinding_ICampaignMasterJobService" type="i0:ICampaignMasterJobService"><wsp:PolicyReference
+        URI="#BasicHttpBinding_ICampaignMasterJobService_policy"/><soap:binding transport="http://schemas.xmlsoap.org/soap/http"/><wsdl:operation
+        name="Login"><soap:operation soapAction="http://campaignmaster.com.au/IAPIService/Login"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="GetServerTime"><soap:operation
+        soapAction="http://campaignmaster.com.au/IAPIService/GetServerTime" style="document"/><wsdl:input><soap:body
+        use="literal"/></wsdl:input><wsdl:output><soap:body use="literal"/></wsdl:output></wsdl:operation><wsdl:operation
+        name="SubmitImportJob"><soap:operation soapAction="http://campaignmaster.com.au/ICampaignMasterJobService/SubmitImportJob"
+        style="document"/><wsdl:input name="SubmitJobRequest"><soap:header message="i0:SubmitJobRequest_Headers"
+        part="JobDefinition" use="literal"/><soap:header message="i0:SubmitJobRequest_Headers"
+        part="SecurityToken" use="literal"/><soap:body use="literal"/></wsdl:input><wsdl:output
+        name="JobSubmissionResultMessage"><soap:body use="literal"/></wsdl:output></wsdl:operation><wsdl:operation
+        name="GetJobResult"><soap:operation soapAction="http://campaignmaster.com.au/ICampaignMasterJobService/GetJobResult"
+        style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body
+        use="literal"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:service
+        name="CampaignMasterJobService"><wsdl:port name="BasicHttpBinding_ICampaignMasterJobService"
+        binding="tns:BasicHttpBinding_ICampaignMasterJobService"><soap:address location="https://api.campaignmaster.co.uk/v1.1/CampaignMasterJobService.svc"/></wsdl:port></wsdl:service></wsdl:definitions>
+    http_version:
+  recorded_at: Mon, 22 Apr 2013 16:35:11 GMT
+- request:
+    method: post
+    uri: https://api.campaignmaster.co.uk/v1.1/CampaignMasterJobService.svc
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><S:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/"
+        xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://campaignmaster.com.au"
+        xmlns:ns3="http://schemas.datacontract.org/2004/07/ECM.BLL.WebServices.Client.API.DataContracts"
+        xmlns:ns4="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:ns5="http://schemas.datacontract.org/2004/07/ECM.Model"
+        xmlns:ns1381="http://campaignmaster.com.au"><S:Body><Login xmlns="http://campaignmaster.com.au"><clientID>123</clientID><userName>derek</userName><password>secret</password></Login></S:Body></S:Envelope>
+    headers:
+      Soapaction:
+      - ! '"http://campaignmaster.com.au/IAPIService/Login"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '703'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 22 Apr 2013 16:35:12 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-Aspnet-Version:
+      - 4.0.30319
+      Mime-Version:
+      - '1.0'
+      Transfer-Encoding:
+      - chunked
+      Cache-Control:
+      - private
+      Content-Type:
+      - multipart/related; type="application/xop+xml";start="<http://tempuri.org/0>";boundary="uuid:df9c2c52-6f6a-4559-ac70-9c4116202651+id=5878";start-info="text/xml"
+    body:
+      encoding: US-ASCII
+      string: ! "\r\n--uuid:df9c2c52-6f6a-4559-ac70-9c4116202651+id=5878\r\nContent-ID:
+        <http://tempuri.org/0>\r\nContent-Transfer-Encoding: 8bit\r\nContent-Type:
+        application/xop+xml;charset=utf-8;type=\"text/xml\"\r\n\r\n<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><LoginResponse
+        xmlns=\"http://campaignmaster.com.au\"><LoginResult><TokenString>secrettoken</TokenString><MinutesTillTokenExpires>480</MinutesTillTokenExpires></LoginResult></LoginResponse></s:Body></s:Envelope>\r\n--uuid:df9c2c52-6f6a-4559-ac70-9c4116202651+id=5878--\r\n"
+    http_version:
+  recorded_at: Mon, 22 Apr 2013 16:35:12 GMT
+recorded_with: VCR 2.4.0
